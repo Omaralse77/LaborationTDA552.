@@ -15,7 +15,7 @@ public class Volvo240 extends Car{
         nrDoors = 4;
         color = Color.black;
         modelName = "Volvo240";
-        enginePower = 105;
+        enginePower = 106;
         xCoordinate = 0;
         yCoordinate = 0;
         stopEngine();
