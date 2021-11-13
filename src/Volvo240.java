@@ -6,6 +6,7 @@ import java.awt.*;
 //Trimfactor method in volvo should be left, because it is unique to volvo
 
 //Sök upp protected, föreläsning 9 november
+
 public class Volvo240 extends Car{
 
     private final static double trimFactor = 1.25; //Variables should probably not be public? Applicable to everything here
@@ -14,7 +15,7 @@ public class Volvo240 extends Car{
         nrDoors = 4;
         color = Color.black;
         modelName = "Volvo240";
-        enginePower = 100;
+        enginePower = 105;
         xCoordinate = 0;
         yCoordinate = 0;
         stopEngine();
