@@ -5,6 +5,8 @@ import java.awt.*;
 
 //Method for turbo should be left in Saab(because it is unique to Saab)
 
+
+//We should then here write implements movable, since a interface is empty?
 public class Saab95 extends Car{
 
     private boolean turboOn; //Private
@@ -35,13 +37,5 @@ public class Saab95 extends Car{
         return enginePower * 0.01 * turbo;
     }
 
-    // TODO fix this method according to lab pm
-    public void gas(double amount){
-        incrementSpeed(amount);
-    }
 
-    // TODO fix this method according to lab pm
-    public void brake(double amount){
-        decrementSpeed(amount);
-    }
 }

@@ -43,5 +43,23 @@ public abstract class Car {
     protected void stopEngine(){
         currentSpeed = 0;
     }
+
+
+
+    // TODO fix this method according to lab pm
+    protected void gas(double amount){
+        incrementSpeed(amount);
+    }
+
+    // TODO fix this method according to lab pm
+    protected void brake(double amount){
+        decrementSpeed(amount);
+    }
 }
 
+//Gas function, should only be able to take in values from 0 to 1. For example if greater or less than 0, do something!
+//If less than or equal to 1, continue. Should take in the variable "amount"
+
+//"move" should be dependent on "currentSpeed"
+//The move function should only update x-cordinates when it is used, for example it should move 10 x-coordinates.
+//When "turn-right" is used, then the direction of car should change, but not a coordinate
