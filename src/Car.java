@@ -5,13 +5,24 @@ import java.awt.*;
 public abstract class Car {
 //
     protected int nrDoors; //Is it better to use private and super in the main class? Yes, use private instead, then use getters,
-    protected double enginePower;
+    protected double enginePower; //should not exist
     protected double currentSpeed;
-    protected Color color;
-    protected String modelName;
-    protected double xCoordinate;
+    protected Color color; //should not exist
+    protected String modelName; //should not exist
+    protected double xCoordinate; //should exist? but in private
     protected double yCoordinate;
     protected int direction;
+
+
+
+    public Car(int nrDoors, double enginePower, Color color, String modelName) {
+        this.nrDoors = nrDoors;
+        this.enginePower = enginePower;
+        this.color = color;
+        this.modelName = modelName;
+
+    }
+
 
     //public Car(int nrDoors
     // this.nrDoors = nrDoors
@@ -44,6 +55,10 @@ public abstract class Car {
     public double getCurrentSpeed(){
         return currentSpeed;
     }
+    private void setCurrentSpeed(double currentSpeed) {
+        this.currentSpeed = currentSpeed;
+    }
+
     public Color getColor(){
         return color;
     }

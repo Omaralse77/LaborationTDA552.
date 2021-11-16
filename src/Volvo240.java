@@ -10,7 +10,7 @@ import java.awt.*;
 public class Volvo240 extends Car{
 
     private final static double trimFactor = 1.25; //Variables should probably not be public? Applicable to everything here
-
+    //volvo should be public instead
     private Volvo240(){
         nrDoors = 4;
         color = Color.black;

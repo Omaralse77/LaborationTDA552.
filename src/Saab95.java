@@ -18,7 +18,7 @@ public class Saab95 extends Car{
         enginePower = 125;
         turboOn = false; //The attributes of every car should not be defined, except currentSpeed that should be zero?
         modelName = "Saab95";
-        xCoordinate = 0;
+        xCoordinate = 0; //X and Y coordinates should also be defined? And direction
         yCoordinate = 0;
         direction = 1;
         stopEngine();
