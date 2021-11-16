@@ -5,6 +5,7 @@ import java.awt.*;
 
 //Method for turbo should be left in Saab(because it is unique to Saab)
 
+//public Saab95(int nrDoors, double enginePower...)
 
 //We should then here write implements movable, since a interface is empty?
 public class Saab95 extends Car{
@@ -13,14 +14,16 @@ public class Saab95 extends Car{
 
     private Saab95(){
         nrDoors = 2;
-        color = Color.red;
+        color = Color.red; //All cars will have this
         enginePower = 125;
-        turboOn = false;
+        turboOn = false; //The attributes of every car should not be defined, except currentSpeed that should be zero?
         modelName = "Saab95";
         xCoordinate = 0;
         yCoordinate = 0;
+        direction = 1;
         stopEngine();
     }
+
 
     private void setTurboOn(){
         turboOn = true;

@@ -18,6 +18,7 @@ public class Volvo240 extends Car{
         enginePower = 106;
         xCoordinate = 0;
         yCoordinate = 0;
+        direction = 1;
         stopEngine();
 
     }
