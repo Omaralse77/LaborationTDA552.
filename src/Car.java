@@ -4,14 +4,14 @@ import java.awt.*;
 //Create abstract method of incrementSpeed for example, since it is implemented in different ways in Saab resp. Volvo
 public abstract class Car {
 //
-    protected int nrDoors; //Is it better to use private and super in the main class? Yes, use private instead, then use getters,
+    private final int nrDoors; //Is it better to use private and super in the main class? Yes, use private instead, then use getters,
     protected double enginePower; //should not exist
-    protected double currentSpeed;
-    protected Color color; //should not exist
-    protected String modelName; //should not exist
-    protected double xCoordinate; //should exist? but in private
-    protected double yCoordinate;
-    protected int direction;
+    private double currentSpeed; //should it be public?
+    private Color color; //should not exist
+    private String modelName; //should not exist
+    private double xCoordinate; //should exist? but in private, should it be private?
+    private double yCoordinate; //Should also be public, as X coordinate
+    private int direction; //should be public
 
 
 
@@ -74,7 +74,7 @@ public abstract class Car {
 
 
 
-    // TODO fix this method according to lab pm
+    // (TODO fix this method according to lab pm)
     protected void gas(double amount){
         incrementSpeed(amount);
     }

@@ -11,15 +11,16 @@ public class Volvo240 extends Car{
 
     private final static double trimFactor = 1.25; //Variables should probably not be public? Applicable to everything here
     //volvo should be public instead
-    private Volvo240(){
-        nrDoors = 4;
-        color = Color.black;
-        modelName = "Volvo240";
-        enginePower = 106;
-        xCoordinate = 0;
-        yCoordinate = 0;
-        direction = 1;
-        stopEngine();
+    public Volvo240(){
+        super(1, 2, Color.red, "Volvo 240");
+        //nrDoors = 4;
+//        color = Color.black;
+//        modelName = "Volvo240";
+//        enginePower = 106;
+//        xCoordinate = 0;
+//        yCoordinate = 0;
+//        direction = 1;
+//        stopEngine();
 
     }
     protected double speedFactor(){

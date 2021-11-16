@@ -12,16 +12,18 @@ public class Saab95 extends Car{
 
     private boolean turboOn; //Private
 
-    private Saab95(){
-        nrDoors = 2;
-        color = Color.red; //All cars will have this
-        enginePower = 125;
-        turboOn = false; //The attributes of every car should not be defined, except currentSpeed that should be zero?
-        modelName = "Saab95";
-        xCoordinate = 0; //X and Y coordinates should also be defined? And direction
-        yCoordinate = 0;
-        direction = 1;
-        stopEngine();
+    public Saab95(){
+        super(1, 2, Color.red, "Saab 95");
+//        //nrDoors = 2;
+//        //color = Color.red; //All cars will have this
+//        enginePower = 125;
+//        turboOn = false; //The attributes of every car should not be defined, except currentSpeed that should be zero?
+//        modelName = "Saab95";
+//        xCoordinate = 0; //X and Y coordinates should also be defined? And direction
+//        yCoordinate = 0;
+//        direction = 1;
+//        stopEngine();
+
     }
 
 
