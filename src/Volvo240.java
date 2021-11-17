@@ -9,10 +9,9 @@ public class Volvo240 extends Car{
     //volvo should be public instead
 
     public Volvo240(){
-        super(4, 100, Color.black,
-                "Volvo240", 0,0,0);
+        super(4, 100, Color.black, "Volvo240",
+                0,0,0);
         stopEngine();
-
     }
     protected double speedFactor(){
         return this.getEnginePower() * 0.01 * trimFactor;

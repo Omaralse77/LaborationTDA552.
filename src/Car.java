@@ -1,19 +1,16 @@
 import java.awt.*;
 //
 //Will later be written as "public abstract class Car implements Movable"
-//Create abstract method of incrementSpeed for example, since it is implemented in different ways in Saab resp. Volvo
 public abstract class Car  {
 //
     private final int nrDoors; //Is it better to use private and super in the main class? Yes, use private instead, then use getters,
     private final double enginePower; //should not exist
-    public double currentSpeed; //should it be public?
+    private double currentSpeed; //should it be public?
     private Color color; //should not exist
     private final String modelName; //should not exist
-    private final double xCoordinate; //should exist? but in private, should it be private?
-    private final double yCoordinate; //Should also be public, as X coordinate
+    private double xCoordinate; //should exist? but in private, should it be private?
+    private double yCoordinate; //Should also be public, as X coordinate
     private final int direction; //should be public
-
-
 
     public Car(int nrDoors, double enginePower, Color color, String modelName,
                double xCoordinate, double yCoordinate, int direction) {
@@ -25,20 +22,6 @@ public abstract class Car  {
         this.yCoordinate = yCoordinate;
         this.direction = direction;
     }
-
-
-    //public Car(int nrDoors
-    // this.nrDoors = nrDoors
-
-    //private in nrDoors
-    //...
-    //public Car(int nrDoors, enginePwer, color, modelname
-    //this.nrDoors = nrDoors
-    //...
-    //
-    //Should have setCurrentspeed (private)
-    //this.currentSpeed
-
     protected abstract double speedFactor();
 
     public void incrementSpeed(double amount){
@@ -59,40 +42,47 @@ public abstract class Car  {
     private void setCurrentSpeed(double currentSpeed) {
         this.currentSpeed = currentSpeed;
     }
-    public String getModelName() {
-        return modelName;
-    }
-    public Color getColor(){
-        return color;
-    }
-    public void setColor(Color clr){
-        color = clr;
-    }
-    public double getxCoordinate() {
-        return xCoordinate;
-    }
-    public double getyCoordinate() {
-        return yCoordinate;
-    }
-    public int getDirection() {
-        return direction;
-    }
-    public void startEngine(){
-        currentSpeed = 0.1;
-    }
+    public String getModelName() {return modelName;}
+
+    public Color getColor(){return color;}
+
+    public void setColor(Color clr){color = clr;}
+
+    public double getxCoordinate() {return xCoordinate;}
+
+    public double getyCoordinate() {return yCoordinate;}
+
+    public int getDirection() {return direction;}
+
+    public void startEngine(){currentSpeed = 0.1;}
+
     public void stopEngine(){
         currentSpeed = 0;
     }
     // (TODO fix this method according to lab pm)
-    protected void gas(double amount){
+    public void gas(double amount){
         incrementSpeed(amount);
     }
     // TODO fix this method according to lab pm
-    protected void brake(double amount){
+    public void brake(double amount){
         decrementSpeed(amount);
     }
-}
+    //Not OCP, but how is it supposed to be??
+    public void move(double currentSpeed){
+        switch (this.direction) {
+            case 0 -> this.xCoordinate = this.xCoordinate + currentSpeed;
+            case 1 -> this.yCoordinate = this.yCoordinate - currentSpeed;
+            case 2 -> this.xCoordinate = this.xCoordinate - currentSpeed;
+            case 3 -> this.yCoordinate = this.yCoordinate + currentSpeed;
+        }
 
+    }
+    public void turnLeft(){
+
+    }
+    public void turnRight(){
+    }
+}
 //Gas function, should only be able to take in values from 0 to 1. For example if greater or less than 0, do something!
 //If less than or equal to 1, continue. Should take in the variable "amount"
 

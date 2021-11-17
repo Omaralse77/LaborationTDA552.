@@ -1,5 +1,5 @@
 public class main {
-    }
+}
 
     //class Saab95(enginePower: 110, etc.)
     //class Saab95(enginePower: 115, etc.
