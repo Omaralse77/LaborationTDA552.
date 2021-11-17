@@ -1,7 +1,8 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.awt.*;
 //
 //Will later be written as "public abstract class Car implements Movable"
-public abstract class Car  {
+public abstract class Car {
 //
     private final int nrDoors; //Is it better to use private and super in the main class? Yes, use private instead, then use getters,
     private final double enginePower; //should not exist

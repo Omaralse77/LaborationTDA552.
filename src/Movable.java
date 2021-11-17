@@ -1,5 +1,5 @@
 public interface Movable {
-    void move();        //In start the X-coordinate should be the first to increment, the X-cordinate should increase
+    void move();        //In start the X-coordinate should be the first to increment, the X-coordinate should increase
                         // Depending on the speed of the car.
 
     //Should have 4 directions(intervall 1-4), so direction 1 is equal to X-positive coordinates. etc.

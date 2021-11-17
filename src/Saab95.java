@@ -4,7 +4,7 @@ import java.awt.*;
 //Method for turbo should be left in Saab(because it is unique to Saab)
 //public Saab95(int nrDoors, double enginePower...)
 //We should then here write implements movable, since a interface is empty?
-public class Saab95 extends Car{
+public class Saab95 extends Car {
 
     private boolean turboOn; //Private
 
