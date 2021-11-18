@@ -2,7 +2,7 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.awt.*;
 //
 //Will later be written as "public abstract class Car implements Movable"
-public abstract class Car {
+public abstract class Car implements Movable {
 //
     private final int nrDoors; //Is it better to use private and super in the main class? Yes, use private instead, then use getters,
     private final double enginePower; //should not exist
@@ -11,7 +11,7 @@ public abstract class Car {
     private final String modelName; //should not exist
     private double xCoordinate; //should exist? but in private, should it be private?
     private double yCoordinate; //Should also be public, as X coordinate
-    private final int direction; //should be public
+    private int direction; //should be public
 
     public Car(int nrDoors, double enginePower, Color color, String modelName,
                double xCoordinate, double yCoordinate, int direction) {
@@ -69,19 +69,21 @@ public abstract class Car {
         decrementSpeed(amount);
     }
     //Not OCP, but how is it supposed to be??
-    public void move(double currentSpeed){
+    public void move(){
         switch (this.direction) {
             case 0 -> this.xCoordinate = this.xCoordinate + currentSpeed;
             case 1 -> this.yCoordinate = this.yCoordinate - currentSpeed;
             case 2 -> this.xCoordinate = this.xCoordinate - currentSpeed;
             case 3 -> this.yCoordinate = this.yCoordinate + currentSpeed;
         }
-
     }
     public void turnLeft(){
-
+        this.direction--;
+        this.direction = Math.floorMod(direction, 4);
     }
     public void turnRight(){
+        this.direction++;
+        this.direction = Math.floorMod(direction, 4);
     }
 }
 //Gas function, should only be able to take in values from 0 to 1. For example if greater or less than 0, do something!
