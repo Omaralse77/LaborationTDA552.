@@ -35,7 +35,7 @@ public abstract class Car implements Movable {
         return nrDoors;
     }
     public double getEnginePower(){
-        return enginePower;
+        return enginePower; //For example this is unnecesarry
     }
     public double getCurrentSpeed(){
         return currentSpeed;
